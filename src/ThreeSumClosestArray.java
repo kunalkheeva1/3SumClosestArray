@@ -14,6 +14,12 @@ public class ThreeSumClosestArray {
             while(j<k){
                 //if its smaller then increase the count and j
                 if(arr[i]+ arr[j]+ arr[k]< sum){
+                    /*i did k-j instead of count++,as for every iteration my pointers ore moving
+                     but if all of the pointers sum is leading to 0
+                    then it means all all the numbers left-side of k(when i and j are standing still)
+                    will provide the same result which is arr[i] + arr[j] + arr[k]
+
+                  */
                     count += k-j;
                     j++;
                 }
